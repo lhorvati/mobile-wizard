@@ -1,7 +1,7 @@
 @import url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
-/*
+
+/* 
 .wizard-wrap.all,
-.wizard-wrap.container,
 .wizard-wrap.container-create,
 .wizard-wrap.amazon,
 .wizard-wrap.git-from-url,
@@ -13,13 +13,15 @@
 .wizard-wrap.github2,
 .wizard-wrap.bitbucket,
 .wizard-wrap.loader,
-.wizard-wrap.sftp
+.wizard-wrap.sftp,
+.wizard-wrap.sftp.public,
+.wizard-wrap.container
     display: none
 
-.wizard-wrap.sftp.public
+.wizard-wrap.digital-ocean.step3
     display: flex
+ */
 
-*/
 
 /* Resets */
 a
@@ -84,9 +86,11 @@ input[type="text"]
         width: 48px
         height: 48px
 
+    /* Text Buttons */
     .wiz-top__create,
     .wiz-top__connect,
-    .wiz-top__next-txt
+    .wiz-top__next-txt,
+    .wiz-top__refresh
         flexbox()
         justify-content: center
         align-items: center
@@ -180,6 +184,7 @@ input[type="text"]
         box-sizing()
         padding: 5px 0
         z-index: 10
+        min-width: 140px
 
         .filter__list--item
             box-sizing()
@@ -190,6 +195,7 @@ input[type="text"]
 /* WIZARD CHECKBOX BOTTOM ========== */
 /* WIZARD PUBLIC KEY BOTTOM ========== */
 .checkbox-bar,
+.checkbox-bar-list,
 .publickey-bar
     position: relative
     flexbox()
@@ -221,7 +227,16 @@ input[type="text"]
             padding: 10px 16px
             box-sizing()
 
-       
+.checkbox-bar-list
+    width: 100%
+    height: 80px
+    flex-flow: row wrap
+    position: relative
+
+    .checkobx-bar-list__item
+        flexbox()
+        flex-flow: row nowrap
+        width: 50%
 
 
 
@@ -252,6 +267,18 @@ input[type="text"]
 .wizard-wrap.sftp.public .wiz-bot
     height: calc(100% - 112px)
 
+/* WIZARD DIGITAL OCEAN step2 -scroll ======================================== */
+.wizard-wrap.digital-ocean.step2 .wiz-bot
+    height: calc(100% - 248px)
+
+/* WIZARD DIGITAL OCEAN step3 -scroll ======================================== */
+.wizard-wrap.digital-ocean.step3
+    .wiz-row-list:first-child
+        margin-bottom: 8px
+
+    .wiz-row-list:nth-child(2)
+        overflow: auto
+        height: calc(100% - 210px)
 
 
 /* WIZARD DIGITAL OCEAN ======================================== */
